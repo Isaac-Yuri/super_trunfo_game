@@ -110,7 +110,7 @@ def menu_vez_jogador_2():
     sleep(0.8)
 
 
-def menu_combate_jogador_1(baralho,pontos_jogador_1,pontos_jogador_2):
+def menu_combate(baralho,pontos_jogador_1,pontos_jogador_2):
     print(f"""{"=" * 180}                                                                                                     
              pontos do jogador um: {pontos_jogador_1}                                                                                   pontos do jogador dois: {pontos_jogador_2}      
                                                          ________________ ________________ ________________ ________________ 
