@@ -18,7 +18,7 @@ while(condicao):
     else:#para sair da interface inicial
         condicao = False
 
-baralho = [["SAMUEL", 99, 99, 99], ["SAMUEL", 99, 99, 99], ["SAMUEL", 99, 99, 99], ["SAMUEL", 99, 99, 99]]
+baralho = [["NARUTO", 99, 99, 99], ["SASUKE", 99, 99, 99], ["SAKURA", 99, 99, 99], ["KISAME", 99, 99, 99], ["ITACHI"], ["RIKUDO"], ["MADARA"], ["YAHIKO"], ["JIRAYA"], ["HINATA"], ["GAARA "], ["MINATO"], ["NAGATO"], ["OBITO "], ["SHISUI"], ["SAKUMO"], ["HAMURA"], ["SASORI"], ["KAKUZU"], ["KAGUYA"]]
 bib_menus.menu_combate_jogador_1(baralho,100,100)
 input("Oque vc deseja fazer?: ")
 sleep(10)

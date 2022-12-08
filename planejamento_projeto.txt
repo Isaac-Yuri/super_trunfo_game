@@ -18,6 +18,10 @@ Regras:
 	- Cartas:
 		- 20 cartas
 		- 3 características diferentes
+		- Atributos:
+			- Ninjutsu
+			- Genjutsu
+			- Taijutsu
 	- Jogadores:
 		- 2 jogadores
 		- 4 cartas sorteadas aleatoriamente, empilhadas e ocultas em uma sequência
@@ -112,5 +116,3 @@ Prazos:
 		- 08/12/2022 - 10/12/2022
 	- Samuel:
 		- 05/12/2022 - 08/12/2022
-GitHub:
-	- 

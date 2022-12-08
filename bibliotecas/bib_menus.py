@@ -35,17 +35,15 @@ def menu_regras():
 
 
 
-
-                                            cada um começa com 1000 pontos, e 4 cartas sorteadas.cada um começa com 1000 pontos,
-                                            e 4 cartas sorteadas aleatoriamente do baralho, que ficarão empilhadas  e ocultas . As
-                                            demais cartas ficam ocultas em uma pilha central. O jogador vencedor terá sua pontuação
-                                            aumentada do valor da característica vencedora. Já o jogador perdedor da rodada terá sua
-                                            pontuação diminuída pela diferença entre os valores comparados nas cartas,Além disso, as  
-                                            duas cartas que disputaram a rodada vão para baixo da pilha do jogador vencedor.Em caso 
-                                            de empate nos valores, a rodada é anulada e as cartas são descartadas. Então, cada jogador
-                                            recebe uma nova carta dentre as que ficaram na pilha central, iniciando a rodada
-                                            novamente Após 4 rodadas,vencerá o jogador que tiver o maior saldo de pontos. Caso
-                                            ambos tenham o mesmo saldo, será decretado um empate.  
+                                            Os jogadores começam a partida com 1000 pontos.
+                                            Cada jogador receberá 4 cartas de 20 do baralho.
+                                            Ao todo, serão 4 rodadas e, em caso de empate, uma quinta rodada será realizada como desempate.
+                                            O jogador que tiver a vez deverá escolher um dos 3 atributos (ninjutsu, genjutsu e taijutsu) para desafiar o adversário.
+                                            O vencedor terá a diferença entre os valores das habilidades desafiadas acrescidas em seu contador de pontos.
+                                            O perdedor, por sua vez, terá debitada a diferença entre as habilidades desafiadas do seu contador de pontos.
+                                            Em caso de empate, a rodada é anulada e uma próxima é realizada.
+                                            Vence o jogador com maior quantidade de pontos.
+                                            Divirta-se e boa sorte no nossso Trunfo-Shippuden!
             
                                                                         Pressione enter para voltar
 

@@ -42,10 +42,3 @@ def carta_usada(baralho):
     #para colar a carta usada no fim do baralho
     baralho.append(baralho[0])#coloca na ultima posição
     del baralho[0]#apaga oque ficou na primeira
-    
-
-
-
-
-
-    
