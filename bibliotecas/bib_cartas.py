@@ -4,9 +4,9 @@ def gera_valores():
     """
     Retorna os valores das características das cartas
     """
-    ninjutsu = randint(10, 99)
-    genjutsu = randint(10, 99)
-    taijutsu = randint(10, 99)
+    ninjutsu = randint(1, 20) * 5 
+    genjutsu = randint(1, 20) * 5
+    taijutsu = randint(1, 20) * 5
     atributos = [ninjutsu, genjutsu, taijutsu] #Os valores dos atributos das cartas são adicionados nesta lista
     return atributos
 
