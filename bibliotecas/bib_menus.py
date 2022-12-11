@@ -41,7 +41,7 @@ def menu_regras():
         O perdedor, por sua vez, terá debitada a diferença entre as habilidades desafiadas do seu contador de pontos.
         Em caso de empate, a rodada é anulada e uma próxima é realizada.
         Vence o jogador com maior quantidade de pontos.
-        Divirta-se e boa sorte no nossso Trunfo-Shippuden!
+        Divirta-se e boa sorte no nosso Trunfo-Shippuden!
             
                             Pressione Enter para voltar
 
@@ -132,7 +132,7 @@ def menu_combate(baralho,pontos_jogador_1,pontos_jogador_2):
 [3]-Usar Taijutsu""")    
 
 
-def menu_jogardor_1_venceu():
+def menu_jogador_1_venceu():
     largura_terminal = os.get_terminal_size()[0]
     print(f"""{"=" * largura_terminal}
     
