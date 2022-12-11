@@ -3,7 +3,7 @@ from time import sleep
 import os
 
 def carregando():
-    print("Carregndo...")
+    print("Carregando...")
     sleep(1)
 
 

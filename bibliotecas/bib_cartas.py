@@ -22,7 +22,7 @@ def gera_baralho(personagens):
     for cartas in range(len(personagens)):
         atributos_carta = gera_valores() #Usamos a função anterior para gerar os atributos
         carta = [personagens[cartas],atributos_carta[0], atributos_carta[1], atributos_carta[2]] #Faz com que o personagem receba seus atributos, gerando uma carta
-        baralho.append(carta) #Na lista do baralho é adicionado a carta que é uma sublista
+        baralho.append(carta) #Na lista do baralho é adicionado a carta que é uma sub-lista
     return baralho
 
 
