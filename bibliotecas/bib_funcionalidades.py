@@ -1,10 +1,6 @@
+import os
 from random import choice
 from time import sleep
-import os
-
-def carregando():
-    print("Carregando...")
-    sleep(1)
 
 
 def limpa_tela():
@@ -12,14 +8,20 @@ def limpa_tela():
     clear()
 
 
-def distribui_cartas(baralho):
-    baralho_jogador = []
-    for indice in range(4):
+def distribui_cartas(baralho, quantidade_cartas):
+    """
+    baralho:
+        Pilha que se deseja retirar a ou as cartas.
+    quantidade_cartas:
+        Quantidade de cartas que se deseja retornar do baralho passado como parâmetro.
+    """
+    cartas_selecionadas = []
+    for i in range(quantidade_cartas):
         carta = choice(baralho)#escolhe uma carta
-        baralho_jogador.append(carta)
+        cartas_selecionadas.append(carta)
         del baralho[baralho.index(carta)]#deleta a carta escolhida
     
-    return baralho_jogador
+    return cartas_selecionadas    
 
 
 def empilha_cartas(baralho):
@@ -31,7 +33,7 @@ def empilha_cartas(baralho):
         del baralho[-1]
 
 
-def caso_empate(baralho,baralho_jogador):
+def caso_empate(baralho, baralho_jogador):
     #para descartar a carta usada
     del baralho_jogador[0]
     #para pegar uma nova carta da pilha
