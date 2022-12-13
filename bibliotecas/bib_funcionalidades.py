@@ -69,7 +69,7 @@ def calcula_pontos_jogador(pontos_jogador, habilidade_vencedora, habilidade_perd
         return pontos
     else:
         diferenca_habilidade = habilidade_vencedora - habilidade_perdedora #Calcula a diferença entre as habilidades
-        pontos = pontos_jogador - diferenca_habilidade
+        pontos -= diferenca_habilidade
         return pontos
 
 def cria_jogador(baralho, quantidade_pontos=1000):
