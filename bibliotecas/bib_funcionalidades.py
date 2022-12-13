@@ -58,18 +58,19 @@ def calcula_pontos_jogador(pontos_jogador, habilidade_vencedora, habilidade_perd
         resultado:
             Se o resultado for True:
                 Calcula os pontos do vencedor:
-                    Soma-se a diferença aos pontos do vencedor
+                    Soma-se a habilidade vencedora aos pontos do vencedor
             Se o resultador não for True:
                 Calcula os pontos do perdedor:
                     Subtrai-se a diferença aos pontos do perdedor
     """
-    diferenca_habilidade = habilidade_vencedora - habilidade_perdedora #Calcula a diferença entre as habilidades
+    pontos = pontos_jogador
     if (resultado):
-        pontos_vencedor = pontos_jogador + diferenca_habilidade
-        return pontos_vencedor
+        pontos += habilidade_vencedora
+        return pontos
     else:
-        pontos_perdedor = pontos_jogador - diferenca_habilidade
-        return pontos_perdedor
+        diferenca_habilidade = habilidade_vencedora - habilidade_perdedora #Calcula a diferença entre as habilidades
+        pontos = pontos_jogador - diferenca_habilidade
+        return pontos
 
 def cria_jogador(baralho, quantidade_pontos=1000):
     """
