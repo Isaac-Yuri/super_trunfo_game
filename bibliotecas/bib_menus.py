@@ -1,10 +1,11 @@
 from time import sleep
 import os
-
+import colorama
+from colorama import Fore
 
 def menu_inicial():
     largura_terminal = os.get_terminal_size()[0]
-    print(f"""{"=" * largura_terminal}
+    print(f"""{"=" * largura_terminal}{Fore.LIGHTYELLOW_EX}
     
                      _______. __    __   __  .______   .______    __    __   _______   _______ .__   __.      
                     /       ||  |  |  | |  | |   _  \  |   _  \  |  |  |  | |       \ |   ____||  \ |  |     
@@ -24,8 +25,9 @@ def menu_inicial():
 
                                         Aperte [1] para jogar 
                                         Aperte [2] para ver as regras
+                                        Aperte [3] para sair
 
-{"=" * largura_terminal}""")
+{Fore.RESET}{"=" * largura_terminal}""")
 
 
 def menu_regras():
@@ -129,12 +131,12 @@ def menu_combate(baralho,pontos_jogador_1,pontos_jogador_2):
 {"=" * largura_terminal}
 [1]-Usar Ninjutsu
 [2]-Usar Genjutsu
-[3]-Usar Taijutsu""")    
+[3]-Usar Taijutsu""")  
 
 
 def menu_jogador_1_venceu():
     largura_terminal = os.get_terminal_size()[0]
-    print(f"""{"=" * largura_terminal}
+    print(f"""{"=" * largura_terminal}\033[32m
     
                __    ______     _______      ___       _______   ______   .______        
               |  |  /  __  \   /  _____|    /   \     |       \ /  __  \  |   _  \       
@@ -150,13 +152,13 @@ def menu_jogador_1_venceu():
           | |    |  |__| |  /  _____  \  |  |\   | |  |  |  | |  `--'  | |  `--'  | 
           |_|     \______| /__/     \__\ |__| \__| |__|  |__|  \______/   \______/                                                            
     
-    
-{"=" * largura_terminal}""")
+    Pressione Enter para sair...
+\033[39m{"=" * largura_terminal}""")
 
 
 def menu_jogador_2_venceu():
     largura_terminal = os.get_terminal_size()[0]
-    print(f"""{"=" * largura_terminal}
+    print(f"""{"=" * largura_terminal}\033[32m
 
                __    ______     _______      ___       _______   ______   .______      
               |  |  /  __  \   /  _____|    /   \     |       \ /  __  \  |   _  \     
@@ -172,8 +174,8 @@ def menu_jogador_2_venceu():
           / /_     |  |__| |  /  _____  \  |  |\   | |  |  |  | |  `--'  | |  `--'  | 
          |____|     \______| /__/     \__\ |__| \__| |__|  |__|  \______/   \______/                                                                                                                                                                          
 
-        
-{"=" * largura_terminal}""")
+    Pressione Enter para sair... 
+\033[39m{"=" * largura_terminal}""")
     
 
 def menu_empate():
@@ -188,4 +190,5 @@ def menu_empate():
             |_______||__|  |__| | _|    /__/     \__\  |__|     |_______|
 
 
+    Pressione Enter para sair...
 {"=" * largura_terminal}""")
