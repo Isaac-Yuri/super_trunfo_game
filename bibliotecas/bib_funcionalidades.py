@@ -46,6 +46,10 @@ def carta_usada(baralho):
     baralho.append(baralho[0])#coloca na ultima posição
     del baralho[0]#apaga oque ficou na primeira
 
+def adicionar_carta_de_outro_baralho(baralho_retira_carta, baralho_recebe_carta):
+    baralho_recebe_carta.append(baralho_retira_carta[0])
+    del baralho_retira_carta[0]
+
 def calcula_pontos_jogador(pontos_jogador, habilidade_vencedora, habilidade_perdedora, resultado=True): 
     """
     Calcula os pontos do jogador:
