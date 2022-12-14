@@ -19,7 +19,7 @@ def menu_inicial():
                             `---|  |----`|  |_)  ||  |  |  | |   \|  | |  |__   |  |  |  | 
                                 |  |     |      / |  |  |  | |  . `  | |   __|  |  |  |  |
                                 |  |     |  |\  \ |  `--'  | |  |\   | |  |     |  `--'  |
-                                |__|     | _| `.__|\______/  |__| \__| |__|      \______/ 
+                                |__|     | _| `._| \______/  |__| \__| |__|      \______/ 
 
 
 
@@ -96,7 +96,7 @@ def menu_vez_jogador_2():
     sleep(0.8)
 
 
-def menu_combate(baralho,pontos_jogador_1,pontos_jogador_2):
+def menu_combate(pontos_jogador_1,pontos_jogador_2):
     largura_terminal = os.get_terminal_size()[0]
     print(f"""{"=" * largura_terminal}                                                                                                     
              Pontos do jogador um: {pontos_jogador_1}       Pontos do jogador dois: {pontos_jogador_2}      
@@ -134,15 +134,13 @@ def menu_combate(baralho,pontos_jogador_1,pontos_jogador_2):
 [3]-Usar Taijutsu""")  
 
 
-def menu_combate_2(baralho_jogador_1, baralho_jogador_2):
-    print(f"""
+def menu_cartas_combate(baralho_jogador_1, baralho_jogador_2):
+    largura_terminal = os.get_terminal_size()[0]
+    print(f"""{"=" * largura_terminal}
     
-
-
-
      ________________                                                                             
-    |                |                                                            
-    |                |                                                            
+    |    Jogador 1   | 
+    |________________|                                                            
     |    {baralho_jogador_1[0][0]}      |                  
     |________________|                                  
     |ninjutsu: {baralho_jogador_1[0][1]}    |                                 
@@ -160,8 +158,8 @@ def menu_combate_2(baralho_jogador_1, baralho_jogador_2):
         \__/  |_______/    
 
      ________________                                                                             
-    |                |                                                            
-    |                |                                                            
+    |    Jogador 2   |                                                            
+    |________________|                                                            
     |    {baralho_jogador_2[0][0]}      |                  
     |________________|                                  
     |ninjutsu: {baralho_jogador_2[0][1]}    |                                 
@@ -171,12 +169,8 @@ def menu_combate_2(baralho_jogador_1, baralho_jogador_2):
     |taijutsu: {baralho_jogador_2[0][3]}    |                                                                
     |________________|
                        
-                                                            
-
-    
-    
-    
-    """)
+                                                        
+    {"=" * largura_terminal}""")
 
 
 def menu_jogador_1_venceu():

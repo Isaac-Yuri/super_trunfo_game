@@ -2,25 +2,27 @@ from bibliotecas.bib_cartas import *
 from bibliotecas.bib_funcionalidades import *
 from bibliotecas.bib_menus import *
 from time import sleep
+from colorama import Fore
 
 def jogada(vez_do_jogador):
     if vez_do_jogador == 1:
-        menu_combate(baralho_principal, jogador1[-1], jogador2[-1])
+        menu_combate(jogador1[-1], jogador2[-1])
         print("Qual opção o jogador 1 escolhe? ")
-    else: 
-        menu_combate(baralho_principal, jogador1[-1], jogador2[-1])
+    else:
+        menu_combate(jogador1[-1], jogador2[-1])
         print("Qual opção o jogador 2 escolhe? ")
     atributo_escolhido = int(input(">>> "))
     limpa_tela()
-    print(f"O nome do personagem do jogador 1 é {jogador1[0][0][0]} e o valor do atributo escolhido dele(a) é: {jogador1[0][0][atributo_escolhido]}")
-    print(f"O nome do personagem do jogador 2 é {jogador2[0][0][0]} e o valor do atributo escolhido dele(a) é: {jogador2[0][0][atributo_escolhido]}")
+    menu_cartas_combate(jogador1[0], jogador2[0])
 
     sleep(1)
 
     # Se o jogador 1 ganhar entra nesse if
     if jogador1[0][0][atributo_escolhido] > jogador2[0][0][atributo_escolhido]:
-        print(f"{jogador1[0][0][0]} ganha de {jogador2[0][0][0]}. Jogador 1 venceu.")
+        print(f"{jogador1[0][0][0]} ganha de {jogador2[0][0][0]}. {Fore.GREEN}Jogador 1 venceu.{Fore.RESET}")
         sleep(1)
+        print("Pressione Enter para sair...")
+        input()
 
         jogador1[-1] = calcula_pontos_jogador(jogador1[-1], jogador1[0][0][atributo_escolhido], jogador2[0][0][atributo_escolhido]) # Soma o atributo vencedor ao vencedor da rodada
         jogador2[-1] = calcula_pontos_jogador(jogador2[-1], jogador1[0][0][atributo_escolhido], jogador2[0][0][atributo_escolhido], resultado=False) # Subtrai a diferença entre os atributos vencedor e perdedor dos pontos do jogador que perdeu
@@ -31,8 +33,10 @@ def jogada(vez_do_jogador):
 
     # Se o jogador 2 ganhar entra nesse elif
     elif jogador2[0][0][atributo_escolhido] > jogador1[0][0][atributo_escolhido]:
-        print(f"{jogador2[0][0][0]} ganha de {jogador1[0][0][0]}. Jogador 2 venceu.")
+        print(f"{jogador2[0][0][0]} ganha de {jogador1[0][0][0]}. {Fore.GREEN}Jogador 2 venceu.{Fore.RESET}")
         sleep(1)
+        print("Pressione Enter para sair...")
+        input()
 
         jogador2[-1] = calcula_pontos_jogador(jogador2[-1], jogador2[0][0][atributo_escolhido], jogador1[0][0][atributo_escolhido]) # Soma o atributo vencedor ao vencedor da rodada
         jogador1[-1] = calcula_pontos_jogador(jogador1[-1], jogador2[0][0][atributo_escolhido], jogador1[0][0][atributo_escolhido], resultado=False) # Subtrai a diferença entre os atributos vencedor e perdedor dos pontos do jogador que perdeu
@@ -43,12 +47,14 @@ def jogada(vez_do_jogador):
     # Se der empate entra no else
     else:
         print(f"{jogador1[0][0][0]} empata com {jogador2[0][0][0]}")
+        caso_empate(baralho_principal, jogador1[0])
+        caso_empate(baralho_principal, jogador2[0])
+        while jogador1[0][0][atributo_escolhido] == jogador2[0][0][atributo_escolhido]:
+            jogada(vez_do_jogador=vez_do_jogador)
         sleep(1)
-    
-    print(len(jogador1[0]), len(jogador2[0]))
 
 while True:
-    personagens = ["Naruto", "Sakura", "Sasuke", "Itachi", "Madara", "Obito ", "Hidan ", "Sasori", "Pain  ", "Konan ", "Jiraya", "Yamato", "Gaara ", "Kiba  ", "Hinata", "Choji ", "Neji  ", "Temari", "Asuma ", "Kakuzu"]
+    personagens = ["Naruto", "Sakura", "Sasuke", "Itachi", "Madara", "Obito", "Hidan", "Sasori", "Pain", "Konan", "Jiraya", "Yamato", "Gaara", "Kiba", "Hinata", "Choji", "Neji", "Temari", "Asuma", "Kakuzu"]
 
     baralho_principal = gera_baralho(personagens)
 
@@ -64,7 +70,7 @@ while True:
 
     limpa_tela()
 
-    numero_de_rodadas = 2
+    numero_de_rodadas = 4
 
     if jogar_ou_ver_regras == 1:
 
