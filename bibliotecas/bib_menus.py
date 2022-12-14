@@ -120,18 +120,63 @@ def menu_combate(baralho,pontos_jogador_1,pontos_jogador_2):
      ________________           
     |                |          
     |                |________________ ________________ ________________
-    |    {baralho[0][0]}      |    {baralho[1][0]}      |    {baralho[2][0]}      |    {baralho[3][0]}      |
-    |________________|________________|________________|________________|
-    |ninjutsu: {baralho[0][1]}    |ninjutsu: {baralho[1][1]}    |ninjutsu: {baralho[2][1]}    |ninjutsu: {baralho[3][1]}    |                
     |                |                |                |                |
-    |genjutsu: {baralho[0][2]}    |genjutsu: {baralho[1][2]}    |genjutsu: {baralho[2][2]}    |genjutsu: {baralho[3][2]}    |
     |                |                |                |                |
-    |taijutsu: {baralho[0][3]}    |taijutsu: {baralho[1][3]}    |taijutsu: {baralho[2][3]}    |taijutsu: {baralho[3][3]}    |
+    |                |                |                |                |                
+    |                |                |                |                |
+    |                |                |                |                |
+    |                |                |                |                |
+    |                |                |                |                |
     |________________|________________|________________|________________|
 {"=" * largura_terminal}
 [1]-Usar Ninjutsu
 [2]-Usar Genjutsu
 [3]-Usar Taijutsu""")  
+
+
+def menu_combate_2(baralho_jogador_1, baralho_jogador_2):
+    print(f"""
+    
+
+
+
+     ________________                                                                             
+    |                |                                                            
+    |                |                                                            
+    |    {baralho_jogador_1[0][0]}      |                  
+    |________________|                                  
+    |ninjutsu: {baralho_jogador_1[0][1]}    |                                 
+    |                |                               
+    |genjutsu: {baralho_jogador_1[0][2]}    |                                           
+    |                |                                         
+    |taijutsu: {baralho_jogador_1[0][3]}    |                                                                
+    |________________|
+    
+    ____    ____   _______.
+    \   \  /   /  /       |
+     \   \/   /  |   (----`
+      \      /    \   \    
+       \    / .----)   |   
+        \__/  |_______/    
+
+     ________________                                                                             
+    |                |                                                            
+    |                |                                                            
+    |    {baralho_jogador_2[0][0]}      |                  
+    |________________|                                  
+    |ninjutsu: {baralho_jogador_2[0][1]}    |                                 
+    |                |                               
+    |genjutsu: {baralho_jogador_2[0][2]}    |                                           
+    |                |                                         
+    |taijutsu: {baralho_jogador_2[0][3]}    |                                                                
+    |________________|
+                       
+                                                            
+
+    
+    
+    
+    """)
 
 
 def menu_jogador_1_venceu():

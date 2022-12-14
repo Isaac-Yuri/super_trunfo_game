@@ -18,8 +18,9 @@ while(condicao):
     else:#para sair da interface inicial
         condicao = False
 
-baralho = [["NARUTO", 99, 99, 99], ["SASUKE", 99, 99, 99], ["SAKURA", 99, 99, 99], ["KISAME", 99, 99, 99], ["ITACHI"], ["RIKUDO"], ["MADARA"], ["YAHIKO"], ["JIRAYA"], ["HINATA"], ["GAARA "], ["MINATO"], ["NAGATO"], ["OBITO "], ["SHISUI"], ["SAKUMO"], ["HAMURA"], ["SASORI"], ["KAKUZU"], ["KAGUYA"]]
-bib_menus.menu_combate_jogador_1(baralho,100,100)
+baralho1 = [["NARUTO", 99, 99, 99], ["SASUKE", 99, 99, 99], ["SAKURA", 99, 99, 99], ["KISAME", 99, 99, 99], ["ITACHI"], ["RIKUDO"], ["MADARA"], ["YAHIKO"], ["JIRAYA"], ["HINATA"], ["GAARA "], ["MINATO"], ["NAGATO"], ["OBITO "], ["SHISUI"], ["SAKUMO"], ["HAMURA"], ["SASORI"], ["KAKUZU"], ["KAGUYA"]]
+baralho2 = [["NARUTO", 99, 99, 99], ["SASUKE", 99, 99, 99], ["SAKUR1A", 99, 99, 99], ["KISAME", 99, 99, 99], ["ITACHI"], ["RIKUDO"], ["MADARA"], ["YAHIKO"], ["JIRAYA"], ["HINATA"], ["GAARA "], ["MINATO"], ["NAGATO"], ["OBITO "], ["SHISUI"], ["SAKUMO"], ["HAMURA"], ["SASORI"], ["KAKUZU"], ["KAGUYA"]]
+bib_menus.menu_combate_2(baralho1,baralho2)
 input("Oque vc deseja fazer?: ")
 sleep(10)
 #inicio do jogo
